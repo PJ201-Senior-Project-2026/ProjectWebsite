@@ -15,6 +15,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="Usage.html">Usage</a></li>
         <li><a href="AboutUs.html">About Us</a></li>
+        <li><a href="profile.html">Profile</a></li>
         <li>
           <a
             href="https://github.com/PJ201-Senior-Project-2026/ProjectWebsite"
@@ -38,9 +39,36 @@
       </p>
 
       <!-- FUTURE TOOL GOES HERE -->
-      <div class="tool-placeholder">
-        <p>Tool UI coming soon...</p>
-      </div>
+      <!-- CHAT INTERFACE -->
+<div class="chat-container">
+
+  <!-- Messages Area -->
+  <div class="chat-messages" id="chat-messages">
+    <!-- Example message -->
+    <div class="message bot">
+      <p>Hello! Ask me anything about your research.</p>
+    </div>
+
+    <!-- User message example -->
+    <!--
+    <div class="message user">
+      <p>Your question here...</p>
+    </div>
+    -->
+  </div>
+
+  <!-- Input Area (ChatGPT style) -->
+  <div class="chat-input-container">
+    <textarea 
+      id="chat-input" 
+      placeholder="Send a message..." 
+      rows="1"
+    ></textarea>
+
+    <button id="send-btn">Send</button>
+  </div>
+
+</div>
     </section>
   </main>
 

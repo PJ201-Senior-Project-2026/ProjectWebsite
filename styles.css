@@ -1,3 +1,7 @@
+/* =========================
+   GLOBAL STYLES (ALL PAGES)
+   ========================= */
+
 /* Reset */
 body, h1, h2, p, a, ul, li {
   margin: 0;
@@ -9,11 +13,14 @@ body, h1, h2, p, a, ul, li {
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  background-color: #eef2f7;
-  color: #333;
+  background-color: #000000;
+  color: #ffffff;
 }
 
-/* Navbar */
+/* =========================
+   NAVBAR (ALL PAGES)
+   ========================= */
+
 .navbar {
   background-color: #ffffff;
   border-bottom: 1px solid #ddd;
@@ -31,11 +38,11 @@ body {
   align-items: center;
 }
 
-/* Logo */
+/* Mart Logo */
 .logo {
   font-weight: bold;
   font-size: 1.2rem;
-  color: #1a73e8;
+  color: #6c14f1;
 }
 
 /* Nav Links */
@@ -67,7 +74,10 @@ body {
   background-color: #155ab6;
 }
 
-/* Main Content */
+/* =========================
+   MAIN LAYOUT (ALL PAGES)
+   ========================= */
+
 main {
   max-width: 800px;
   margin: auto;
@@ -83,21 +93,26 @@ section {
 h1 {
   font-size: 2.2rem;
   margin-bottom: 20px;
-  color: #1a73e8;
+  color: #6e09e9;
+  text-align:center;
 }
 
 h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: #444;
+  color: #444444;
 }
 
 /* Paragraphs */
 p {
   margin-bottom: 15px;
+  text-align: center;
 }
 
-/* Cards (Usage Section) */
+/* =========================
+   USAGE.HTML (CARDS)
+   ========================= */
+
 .card {
   background: #ffffff;
   padding: 20px;
@@ -106,19 +121,21 @@ p {
   border: 1px solid #ddd;
 }
 
-/* Card headings */
 .card h3 {
   margin-bottom: 10px;
   color: #1a73e8;
 }
 
-/* Team Section */
+/* =========================
+   ABOUTUS.HTML (TEAM)
+   ========================= */
+
 .team {
   display: flex;
   gap: 20px;
   margin-top: 20px;
   flex-wrap: wrap;
-  justify-content: center; /* keeps rows centered */
+  justify-content: center;
 }
 
 .team-member {
@@ -127,27 +144,229 @@ p {
   border-radius: 8px;
   border: 1px solid #ddd;
 
-  /* KEY FIX */
-  flex: 0 0 220px;  /* fixed width instead of stretching */
+  flex: 0 0 220px;
   max-width: 220px;
 }
+
+.team-member img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  background-color: #ddd;
+}
+
+/* =========================
+   INDEX.HTML (OLD PLACEHOLDER)
+   ========================= */
 
 .tool-placeholder {
   margin-top: 30px;
   padding: 40px;
-  background: #ffffff;
+  background: #141414;
   border: 2px dashed #ccc;
   text-align: center;
   border-radius: 8px;
   color: #777;
 }
 
-/* Team images */
-.team-member img {
+/* =========================
+   LOGIN / REGISTER HTML
+   ========================= */
+
+.auth-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.auth-box {
+  background: #000000;
+  padding: 40px;
+  border-radius: 20px;
+  width: 320px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 10px 25px rgb(126, 3, 234);
+}
+
+.auth-box input {
   width: 100%;
-  height: 180px;
-  object-fit: cover; /* keeps images from stretching */
-  border-radius: 6px;
-  margin-bottom: 10px;
-  background-color: #ddd; /* shows if image is missing */
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #7f07f8;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.auth-box button:hover {
+  transform: scale(1.05);
+  background-color: #2563eb;
+}
+
+#toggle-text {
+  margin-top: 150px;
+  font-size: 0.9em;
+}
+
+#toggle-mode {
+  color: #2563eb;
+  cursor: pointer;
+}
+
+/* =========================
+   PROFILE.HTML
+   ========================= */
+
+.profile-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.profile-box {
+  background: #1e293b;
+  padding: 40px;
+  border-radius: 20px;
+  width: 350px;
+  color: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.profile-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-box label {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+.profile-box input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.profile-box button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: #3b82f6;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.profile-box button:hover {
+  transform: scale(1.05);
+  background-color: #2563eb;
+}
+
+#status-message {
+  margin-top: 15px;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+/* =====================================================
+   INDEX.HTML (CHATGPT-STYLE CHAT INTERFACE)
+   This section is ONLY used in index.html
+   ===================================================== */
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  background: #3b3a3a;
+  border-radius: 10px;
+  border: 1px solid #6b07ee;
+  overflow: hidden;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.message {
+  max-width: 70%;
+  padding: 12px 15px;
+  border-radius: 12px;
+  line-height: 1.4;
+}
+
+.message.bot {
+  background-color: #1178e0;
+  align-self: flex-start;
+}
+
+.message.user {
+  background-color: #1a73e8;
+  color: white;
+  align-self: flex-end;
+}
+
+.chat-input-container {
+  display: flex;
+  border-top: 1px solid #ddd;
+  padding: 10px;
+  gap: 10px;
+  background: #fafafa;
+}
+
+#chat-input {
+  flex: 1;
+  resize: none;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: inherit;
+  outline: none;
+}
+
+#send-btn {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  padding: 0 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#send-btn:hover {
+  transform: scale(1.05);
+  background-color: #155ab6;
 }
