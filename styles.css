@@ -3,7 +3,7 @@
    ========================= */
 
 /* Reset */
-body, h1, h2, p, a, ul, li {
+body, h1, h2, h3, p, a, ul, li {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -13,8 +13,8 @@ body, h1, h2, p, a, ul, li {
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 /* =========================
@@ -22,11 +22,12 @@ body {
    ========================= */
 
 .navbar {
-  background-color: #ffffff;
+  background-color: #000000;
   border-bottom: 1px solid #ddd;
   position: sticky;
   top: 0;
   width: 100%;
+  z-index: 1000;
 }
 
 .nav-container {
@@ -50,11 +51,12 @@ body {
   list-style: none;
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #333;
+  color: #ffffff;
   font-weight: 500;
 }
 
@@ -72,6 +74,85 @@ body {
 
 .github-btn:hover {
   background-color: #155ab6;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+}
+
+/* Button */
+.dropbtn {
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px 0;
+}
+
+/* Dropdown menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; /* KEY FIX: attach directly under button */
+  left: 0;
+  background-color: #ffffff;
+  min-width: 180px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+/* Invisible bridge to prevent gap flicker */
+.dropdown::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 10px;
+}
+
+/* Links */
+.dropdown-content a {
+  color: black;
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Keep open on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* =========================
+   HERO SECTION (FIXED)
+   ========================= */
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 300px;
+  background: linear-gradient(135deg, #ffffff, #ffffff);
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: rgb(0, 0, 0);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #e0e0e0;
 }
 
 /* =========================
@@ -94,13 +175,14 @@ h1 {
   font-size: 2.2rem;
   margin-bottom: 20px;
   color: #6e09e9;
-  text-align:center;
+  text-align: center;
 }
 
 h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
   color: #444444;
+  text-align: center;
 }
 
 /* Paragraphs */
@@ -127,25 +209,30 @@ p {
 }
 
 /* =========================
-   ABOUTUS.HTML (TEAM)
+   TEAM (CENTERED)
    ========================= */
 
 .team {
   display: flex;
-  gap: 20px;
-  margin-top: 20px;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 20px;
 }
 
 .team-member {
   background: #ffffff;
-  padding: 15px;
+  padding: 12px;
   border-radius: 8px;
-  border: 1px solid #ddd;
-
+  border: 3px solid #7107eb;
   flex: 0 0 220px;
   max-width: 220px;
+  transition: transform 0.2s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
 }
 
 .team-member img {
@@ -154,11 +241,10 @@ p {
   object-fit: cover;
   border-radius: 6px;
   margin-bottom: 10px;
-  background-color: #ddd;
 }
 
 /* =========================
-   INDEX.HTML (OLD PLACEHOLDER)
+   INDEX PLACEHOLDER
    ========================= */
 
 .tool-placeholder {
@@ -172,7 +258,7 @@ p {
 }
 
 /* =========================
-   LOGIN / REGISTER HTML
+   LOGIN / REGISTER
    ========================= */
 
 .auth-section {
@@ -188,7 +274,7 @@ p {
   border-radius: 20px;
   width: 320px;
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: white;
   box-shadow: 0 10px 25px rgb(126, 3, 234);
 }
 
@@ -198,7 +284,6 @@ p {
   margin: 10px 0;
   border-radius: 10px;
   border: none;
-  outline: none;
 }
 
 .auth-box button {
@@ -211,8 +296,6 @@ p {
   color: white;
   font-weight: bold;
   cursor: pointer;
-
-  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .auth-box button:hover {
@@ -220,18 +303,8 @@ p {
   background-color: #2563eb;
 }
 
-#toggle-text {
-  margin-top: 150px;
-  font-size: 0.9em;
-}
-
-#toggle-mode {
-  color: #2563eb;
-  cursor: pointer;
-}
-
 /* =========================
-   PROFILE.HTML
+   PROFILE
    ========================= */
 
 .profile-section {
@@ -247,18 +320,6 @@ p {
   border-radius: 20px;
   width: 350px;
   color: white;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-.profile-box h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.profile-box label {
-  display: block;
-  margin-top: 10px;
-  font-size: 0.9em;
 }
 
 .profile-box input {
@@ -267,106 +328,128 @@ p {
   margin-top: 5px;
   border-radius: 10px;
   border: none;
-  outline: none;
 }
 
 .profile-box button {
   width: 100%;
   padding: 10px;
   margin-top: 15px;
-  border: none;
   border-radius: 10px;
   background-color: #3b82f6;
   color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.profile-box button:hover {
-  transform: scale(1.05);
-  background-color: #2563eb;
-}
-
-#status-message {
-  margin-top: 15px;
-  font-size: 0.9em;
-  text-align: center;
-}
-
-/* =====================================================
-   INDEX.HTML (CHATGPT-STYLE CHAT INTERFACE)
-   This section is ONLY used in index.html
-   ===================================================== */
+/* =========================
+   CHAT INTERFACE (INDEX)
+   ========================= */
 
 .chat-container {
+  max-width: 700px;
+  margin: 30px auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
-  height: 70vh;
-  background: #3b3a3a;
-  border-radius: 10px;
-  border: 1px solid #6b07ee;
+  height: 500px;
+  background-color: #fafafa;
   overflow: hidden;
 }
 
+/* Messages area */
 .chat-messages {
   flex: 1;
-  padding: 20px;
+  padding: 15px;
   overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
 }
 
+/* Individual messages */
 .message {
-  max-width: 70%;
-  padding: 12px 15px;
-  border-radius: 12px;
-  line-height: 1.4;
+  margin-bottom: 10px;
+  display: flex;
 }
 
+.message p {
+  padding: 10px 14px;
+  border-radius: 15px;
+  max-width: 75%;
+  text-align: left;
+}
+
+/* Bot message */
 .message.bot {
-  background-color: #1178e0;
-  align-self: flex-start;
+  justify-content: flex-start;
 }
 
+.message.bot p {
+  background-color: #e5e7eb;
+  color: #000;
+}
+
+/* User message */
 .message.user {
-  background-color: #1a73e8;
-  color: white;
-  align-self: flex-end;
+  justify-content: flex-end;
 }
 
+.message.user p {
+  background-color: #6c14f1;
+  color: #fff;
+}
+
+/* Input container */
 .chat-input-container {
   display: flex;
   border-top: 1px solid #ddd;
   padding: 10px;
-  gap: 10px;
-  background: #fafafa;
+  background: #ffffff;
 }
 
+/* Textarea */
 #chat-input {
   flex: 1;
   resize: none;
   border: 1px solid #ccc;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 10px;
-  font-family: inherit;
+  font-size: 14px;
   outline: none;
 }
 
+/* Send button */
 #send-btn {
-  background-color: #1a73e8;
-  color: white;
+  margin-left: 10px;
+  padding: 10px 16px;
   border: none;
-  padding: 0 20px;
-  border-radius: 10px;
+  background-color: #6c14f1;
+  color: white;
+  border-radius: 20px;
   cursor: pointer;
-  font-weight: bold;
-
-  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 #send-btn:hover {
-  transform: scale(1.05);
-  background-color: #155ab6;
+  background-color: #5311c9;
+}
+
+/* Remove underline from the logo link */
+a.logo {
+  text-decoration: none;
+  color: #6c14f1; /* Keeps the logo color the same */
+}
+
+/* Profile picture and name in the navbar */
+#user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-pic {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#user-name {
+  color: white;
+  font-weight: 500;
 }
