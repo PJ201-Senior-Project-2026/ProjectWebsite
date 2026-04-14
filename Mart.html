@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Multi-Agent Research Tool</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">MART</div>
+      <ul class="nav-links">
+        <li><a href="landinglog.html">Home</a></li>
+        <li><a href="Usage.html">Usage</a></li>
+        <li><a href="#demo">Demo</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="https://github.com/PJ201-Senior-Project-2026/ProjectWebsite" target="_blank">GitHub</a></li>
+
+        <li class="dropdown">
+            <span class="dropbtn">Documents ▼</span>
+            <div class="dropdown-content">
+                <a href="docs/proposal.pdf" target="_blank">Project Proposal</a>
+                <a href="docs/report.pdf" target="_blank">Final Report</a>
+                <a href="docs/presentation.pdf" target="_blank">Presentation Slides</a>
+            </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <section>
+      <h1>Multi-Agent Research Tool</h1>
+      <p>
+        This page will host the interactive interface for our multi-agent system.
+      </p>
+
+      <!-- FUTURE TOOL GOES HERE -->
+      <!-- CHAT INTERFACE -->
+<div class="chat-container">
+
+  <!-- Messages Area -->
+  <div class="chat-messages" id="chat-messages">
+    <!-- Example message -->
+    <div class="message bot">
+      <p>Hello! Ask me anything about your research.</p>
+    </div>
+
+    <!-- User message example -->
+    <!--
+    <div class="message user">
+      <p>Your question here...</p>
+    </div>
+    -->
+  </div>
+
+  <!-- Input Area (ChatGPT style) -->
+  <div class="chat-input-container">
+    <textarea 
+      id="chat-input" 
+      placeholder="What would you like to research today?" 
+      rows="1"
+    ></textarea>
+
+    <button id="send-btn">Begin Research</button>
+  </div>
+
+</div>
+    </section>
+  </main>
+</body>
+</html>

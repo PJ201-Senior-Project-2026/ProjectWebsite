@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Multi-Agent Research Tool</title>
+  <title>SP-201 Red Multi Agent Pipeline</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,13 +11,13 @@
   <nav class="navbar">
     <div class="nav-container">
       <div class="logo">MART</div>
-      <ul class="nav-links">
-        <li><a href="landinglog.html">Home</a></li>
-        <li><a href="Usage.html">Usage</a></li>
-        <li><a href="#demo">Demo</a></li>
-        <li><a href="profile.html">Profile</a></li>
-        <li><a href="https://github.com/PJ201-Senior-Project-2026/ProjectWebsite" target="_blank">GitHub</a></li>
 
+      <ul class="nav-links">
+        <li><a href="#demo">Demo</a></li>
+        <li><a href="https://github.com/PJ201-Senior-Project-2026/ProjectWebsite" target="_blank">GitHub</a></li>
+        <li><a href="Login.html">Login / Register</a></li>
+
+        <!-- FIXED Dropdown -->
         <li class="dropdown">
             <span class="dropbtn">Documents ▼</span>
             <div class="dropdown-content">
@@ -30,46 +30,50 @@
     </div>
   </nav>
 
-  <!-- Main Content -->
-  <main>
-    <section>
-      <h1>Multi-Agent Research Tool</h1>
-      <p>
-        This page will host the interactive interface for our multi-agent system.
-      </p>
-
-      <!-- FUTURE TOOL GOES HERE -->
-      <!-- CHAT INTERFACE -->
-<div class="chat-container">
-
-  <!-- Messages Area -->
-  <div class="chat-messages" id="chat-messages">
-    <!-- Example message -->
-    <div class="message bot">
-      <p>Hello! Ask me anything about your research.</p>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>SP 201 Red Multi Agent Pipeline</h1>
+      <p class="subtitle">CS4850 | Spring | 2026</p>
     </div>
+  </header>
 
-    <!-- User message example -->
-    <!--
-    <div class="message user">
-      <p>Your question here...</p>
+  <!-- Demo -->
+  <section id="demo" class="section">
+    <h2>Demo</h2>
+    <p>This will host the interactive demo of the multi-agent system.</p>
+  </section>
+
+  <!-- TEAM -->
+  <section class="section">
+    <h2>Our Team</h2>
+
+    <div class="team">
+      <div class="team-member">
+        <img src="./assets/Raaid.png">
+        <h3>Raaid Khan</h3>
+        <p>Documenter</p>
+      </div>
+
+      <div class="team-member">
+        <img src="./assets/Will.png">
+        <h3>Nha Phan</h3>
+        <p>Developer</p>
+      </div>
+
+      <div class="team-member">
+        <img src="./assets/Afra.png">
+        <h3>Afra Kurudirek</h3>
+        <p>Documenter</p>
+      </div>
+
+      <div class="team-member">
+        <img src="./assets/Melike.png">
+        <h3>Melike Ozcelik</h3>
+        <p>Developer</p>
+      </div>
     </div>
-    -->
-  </div>
+  </section>
 
-  <!-- Input Area (ChatGPT style) -->
-  <div class="chat-input-container">
-    <textarea 
-      id="chat-input" 
-      placeholder="What would you like to research today?" 
-      rows="1"
-    ></textarea>
-
-    <button id="send-btn">Begin Research</button>
-  </div>
-
-</div>
-    </section>
-  </main>
 </body>
 </html>
