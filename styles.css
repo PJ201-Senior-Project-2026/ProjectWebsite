@@ -17,6 +17,37 @@ body {
   color: #000000;
 }
 
+/* Main Layout */
+main {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+/* Headings */
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #6e09e9;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #444444;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
 /* =========================
    NAVBAR (ALL PAGES)
    ========================= */
@@ -243,19 +274,6 @@ p {
   margin-bottom: 10px;
 }
 
-/* =========================
-   INDEX PLACEHOLDER
-   ========================= */
-
-.tool-placeholder {
-  margin-top: 30px;
-  padding: 40px;
-  background: #141414;
-  border: 2px dashed #ccc;
-  text-align: center;
-  border-radius: 8px;
-  color: #777;
-}
 
 /* =========================
    LOGIN / REGISTER
@@ -343,58 +361,6 @@ p {
    CHAT INTERFACE (INDEX)
    ========================= */
 
-.chat-container {
-  max-width: 700px;
-  margin: 30px auto;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  height: 500px;
-  background-color: #fafafa;
-  overflow: hidden;
-}
-
-/* Messages area */
-.chat-messages {
-  flex: 1;
-  padding: 15px;
-  overflow-y: auto;
-}
-
-/* Individual messages */
-.message {
-  margin-bottom: 10px;
-  display: flex;
-}
-
-.message p {
-  padding: 10px 14px;
-  border-radius: 15px;
-  max-width: 75%;
-  text-align: left;
-}
-
-/* Bot message */
-.message.bot {
-  justify-content: flex-start;
-}
-
-.message.bot p {
-  background-color: #e5e7eb;
-  color: #000;
-}
-
-/* User message */
-.message.user {
-  justify-content: flex-end;
-}
-
-.message.user p {
-  background-color: #6c14f1;
-  color: #fff;
-}
-
 /* Input container */
 .chat-input-container {
   display: flex;
@@ -403,11 +369,11 @@ p {
   background: #ffffff;
 }
 
-/* Textarea */
+/* Outside bubble of What to research */
 #chat-input {
   flex: 1;
   resize: none;
-  border: 1px solid #ccc;
+  border: 1px solid #a81ae0;
   border-radius: 20px;
   padding: 10px;
   font-size: 14px;
@@ -429,6 +395,9 @@ p {
   background-color: #5311c9;
 }
 
+/* =========================
+   Mart Logo
+   ========================= */
 /* Remove underline from the logo link */
 a.logo {
   text-decoration: none;
