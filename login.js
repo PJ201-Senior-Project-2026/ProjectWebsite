@@ -19,5 +19,5 @@ document.getElementById("login-btn").addEventListener("click", async () => {
   }
 
   alert("Login successful!");
-  window.location.href = "index.html";
+  window.location.href = "landinglog.html";
 });
