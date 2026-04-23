@@ -1,6 +1,11 @@
 /* =========================
    GLOBAL STYLES (ALL PAGES)
    ========================= */
+ 
+/* Define global variables */
+:root {
+  --primary-color: #a663f9;
+}
 
 /* Reset */
 body, h1, h2, h3, p, a, ul, li {
@@ -32,7 +37,7 @@ section {
 h1 {
   font-size: 2.2rem;
   margin-bottom: 20px;
-  color: #6e09e9;
+  color: var(--primary-color);
   text-align: center;
 }
 
@@ -74,7 +79,7 @@ p {
 .logo {
   font-weight: bold;
   font-size: 1.2rem;
-  color: #6c14f1;
+  color: var(--primary-color);
 }
 
 /* Nav Links */
@@ -92,7 +97,7 @@ p {
 }
 
 .nav-links a:hover {
-  color: #1a73e8;
+  color: var(--primary-color);
 }
 
 /* GitHub Button */
@@ -154,6 +159,7 @@ p {
 
 .dropdown-content a:hover {
   background-color: #f0f0f0;
+  color: #000;
 }
 
 /* Keep open on hover */
@@ -260,7 +266,7 @@ p {
   background: #ffffff;
   padding: 12px;
   border-radius: 8px;
-  border: 3px solid #7107eb;
+  border: 3px solid var(--primary-color);
   flex: 0 0 220px;
   max-width: 220px;
   transition: transform 0.2s ease;
@@ -405,7 +411,7 @@ p {
 /* Remove underline from the logo link */
 a.logo {
   text-decoration: none;
-  color: #6c14f1; /* Keeps the logo color the same */
+  color: var(--primary-color); /* Keeps the logo color the same */
 }
 
 /* Profile picture and name in the navbar */
